@@ -42,6 +42,7 @@
         app:layout_constraintStart_toStartOf="parent"/>
     
     <EditText
+        android:id="@+id/loginTV3"
         android:layout_width="343dp"
         android:layout_height="56dp"
         android:layout_marginTop="228dp"
@@ -58,6 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"/>
 
     <Button
+        android:id="@+id/loginBtn"
         android:layout_width="343dp"
         android:layout_height="48dp"
         android:layout_marginTop="324dp"

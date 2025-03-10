@@ -8,11 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.coroutines.delay
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var handler: Handler
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        handler.postDelayed(Runnable {
+        Handler(Looper.getMainLooper()).postDelayed(Runnable {
             startActivity(Intent(this,Login::class.java))
         }, 3000)
     }
