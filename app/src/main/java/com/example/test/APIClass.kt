@@ -17,4 +17,10 @@ interface APIClass{
     fun verifyOTP(
         @Field("contact_number") contactNumber: String, @Field("otp") otp: Int
     ): Call<APIDataClassOTP>
+
+    @FormUrlEncoded
+    @POST("edit-profile")
+    fun editProfile(
+
+    ):Call<EditProfile>
 }

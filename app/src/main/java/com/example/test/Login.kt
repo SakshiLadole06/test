@@ -15,7 +15,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class Login : AppCompatActivity() {
     private lateinit var loginTV3:EditText
     private lateinit var loginBtn:Button
-    val url="https://strengthen-numbers-stag.dev-imaginovation.net/api/"
+    val url="https://strengthen-numbers-stag.dev-imaginovation.net/api/v2/"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -23,7 +23,8 @@ class Login : AppCompatActivity() {
         loginBtn=findViewById(R.id.loginBtn)
 
         loginBtn.setOnClickListener{
-            doLogin("+1" + loginTV3.text.toString())
+//            doLogin("+1" + loginTV3.text.toString())
+            doLogin("+19173777213")
         }
     }
 
@@ -48,16 +49,16 @@ class Login : AppCompatActivity() {
                         startActivity(moveOTPpage)
                     }
                     else{
-                        Toast.makeText(this@Login,"Error Occurred: ${"A"+response.message()}", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@Login,"Error Occurred: ${response.message()}", Toast.LENGTH_SHORT).show()
                     }
                 }
                 catch (e: Exception) {
-                    Toast.makeText(this@Login,"Error Occurred: ${"B"+e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@Login,"Error Occurred: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<APIDataClassLogin>, t: Throwable) {
-                Toast.makeText(this@Login,"Error Occurred: ${"C"+t.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@Login,"Error Occurred: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
