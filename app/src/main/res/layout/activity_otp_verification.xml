@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTP_Verification">
+
+    <TextView
+        android:id="@+id/otpTV1"
+        android:layout_width="188dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginStart="94dp"
+        android:textSize="24dp"
+        android:fontFamily="@font/manrope_bold"
+        android:lineHeight="40dp"
+        app:flow_verticalAlign="center"
+        android:letterSpacing="0"
+        android:textFontWeight="700"
+        android:textColor="@color/textColor"
+        android:text="OTP Verification"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/otpTV2"
+        android:layout_width="343dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/textColor"
+        android:textSize="16dp"
+        android:lineHeight="24dp"
+        android:letterSpacing="0"
+        android:gravity="center"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        android:textFontWeight="400"
+        android:text="We have sent the verification code to your (705) 555-0127 mobile number."
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        android:id="@+id/otpTV3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otpTV2" />
+
+    <TextView
+        android:id="@+id/otpTV4"
+        android:layout_width="182dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="344dp"
+        android:layout_marginStart="97dp"
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/textColor"
+        android:textSize="12dp"
+        android:text="Did't recevied OTP? 30:00"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/otpTV5"
+        android:layout_width="93dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginStart="141.5dp"
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/textColor"
+        android:text="Resend OTP"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/otpBtn1"
+        android:layout_width="343dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="462dp"
+        android:layout_marginStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp"
+        android:paddingBottom="12dp"
+        app:flow_horizontalGap="10dp"
+        app:flow_verticalGap="10dp"
+        android:backgroundTint="@color/btnColor"
+        android:text="Verify"
+        android:fontFamily="@font/manrope_regular"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
