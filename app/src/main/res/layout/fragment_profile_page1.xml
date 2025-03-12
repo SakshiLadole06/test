@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".day_two.fragments.ProfilePage1">
+
+    <TextView
+        android:layout_width="153dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="111dp"
+        android:text="Profile Setup"
+        android:textFontWeight="700"
+        android:textSize="24sp"
+        android:lineHeight="32dp"
+        android:letterSpacing="0"
+        android:fontFamily="@font/manrope_bold"/>
+
+    <TextView
+        android:layout_width="343dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="16dp"
+        android:text="Please complete the fields below to set up your profile."
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/profilePageTextColor"
+        android:gravity="center"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        android:lineHeight="24dp"
+        android:letterSpacing="0"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="195dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/transparent">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:drawableStart="@drawable/person"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Full Name"
+            android:paddingStart="12dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/transparent">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:drawableStart="@drawable/mail"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Email"
+            android:paddingStart="12dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/transparent">
+
+        <EditText
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/dob"
+            android:backgroundTint="@android:color/transparent"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:hint="Date Of Birth"
+            android:paddingStart="12dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:layout_width="250dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="390dp"
+        android:layout_marginStart="16dp"
+        android:isCredential="true"
+        android:text="I Agree all terms and condition"/>
+
+    <CheckBox
+        android:layout_width="216dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="430dp"
+        android:layout_marginStart="16dp"
+        android:text="Yes, I'm 18 years old"
+        android:isCredential="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="670dp">
+        <Button
+            android:id="@+id/B1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:backgroundTint="@color/layoutColor"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/B2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:backgroundTint="@color/btnColor"
+            android:text="Next"
+            android:fontFamily="@font/manrope_regular"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</FrameLayout>

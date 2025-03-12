@@ -3,4 +3,6 @@
     <string name="loginTv1">Account</string>
     <string name="loginTv2">Enter your mobile number to proceed.</string>
     <string name="continueBtn">Continue</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

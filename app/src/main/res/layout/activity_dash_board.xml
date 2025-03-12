@@ -1,10 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashBoard">
+
+    <ImageView
+        android:id="@+id/dashIp1"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="200dp"
+        app:cardCornerRadius="36dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dashIp2_txt_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/manrope_regular"
+        android:lineHeight="24dp"
+        android:textColor="@color/textColor"
+        android:textFontWeight="600"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashIp1" />
+
+    <TextView
+        android:id="@+id/dashIp3_txt_user_bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/manrope_regular"
+        android:lineHeight="22dp"
+        android:textAlignment="center"
+        android:textColor="#666666"
+        android:textFontWeight="400"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashIp2_txt_user_name" />
+
+    <LinearLayout
+        android:id="@+id/dashIp4_interests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashIp3_txt_user_bio">
+
+        <TextView
+            android:id="@+id/txt_interest1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:background="@color/interestTxtColor"
+            android:fontFamily="@font/manrope_regular"
+            android:lineHeight="12dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="@color/textColor"
+            android:textFontWeight="500"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_interest2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@color/interestTxtColor"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/manrope_regular"
+            android:lineHeight="12dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textFontWeight="500"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_interest3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@color/interestTxtColor"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/manrope_regular"
+            android:lineHeight="12dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textFontWeight="500"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/following_follower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashIp4_interests">
+
+        <TextView
+            android:id="@+id/dashIp5_txt_followers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/manrope_regular"
+            android:lineHeight="22dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:background="@color/interestTxtColor"
+            android:textColor="@color/textColor"
+            android:textFontWeight="600"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/manrope_regular"
+            android:text="Followers"
+            android:lineHeight="12dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#808080"
+            android:textFontWeight="500"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/dashIp6_txt_following"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/manrope_regular"
+            android:lineHeight="22dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:background="@color/interestTxtColor"
+            android:textColor="@color/textColor"
+            android:textFontWeight="600"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Following"
+            android:fontFamily="@font/manrope_regular"
+            android:lineHeight="12dp"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:textColor="#808080"
+            android:textFontWeight="500"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/manrope_bold"
+        android:lineHeight="24dp"
+        android:text="LogOut"
+        android:textFontWeight="700"
+        android:textSize="16dp"
+        app:backgroundTint="@color/btnColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/following_follower" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

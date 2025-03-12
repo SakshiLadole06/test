@@ -18,23 +18,18 @@ class LocationPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_location_page)
 
+        val profilepg=Intent(this@LocationPage,ProfilePageActivity::class.java)
         val arr= arrayOf(Manifest.permission.ACCESS_FINE_LOCATION)
         //find id
         dontAllowBtn=findViewById(R.id.locB1)
         allowBtn=findViewById(R.id.locB2)
 
         dontAllowBtn.setOnClickListener {
-            Log.d("ABC1","btn clicked")
-            val profilepg=Intent(this@LocationPage,ProfilePage1::class.java)
-            Log.d("ABC1","btn clicked......")
             startActivity(profilepg)
         }
 
         allowBtn.setOnClickListener {
-            Log.d("ABC","btn clicked")
-            val profilepg=Intent(this@LocationPage,ProfilePage1::class.java)
-            Log.d("ABC","btn clicked......")
-            requestPermissions(arr, RESULT_OK)
+            requestPermissions(arr, 100)
             startActivity(profilepg)
         }
     }

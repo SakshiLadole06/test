@@ -1,7 +1,9 @@
-package com.example.test
+package com.example.test.model
+
+import java.io.Serializable
 
 data class APIDataClassOTP(
-    val data:Data,val meta:Meta
+    val data: Data, val meta: Meta
 )
 
 data class APIDataClassLogin(
@@ -20,9 +22,11 @@ data class Data(
     val latitude : String,
     val longitude: String,
     val fitness_level: String,
-    val interests: String,
-    val profile_photo: String
-)
+    val interests: List<String>,
+    val profile_photo: String,
+    val total_followers: Int,
+    val total_followings: Int,
+): Serializable
 
 data class Meta(
     val message:String
@@ -41,7 +45,7 @@ data class EditProfile(
     val latitude : Double,
     val longitude: Double,
     val fitness_level: String,
-    val interests: String,
+    val interests: List<String>,
     val profile_photo: String,
     val registered_at: String,
     val total_followers: Int,

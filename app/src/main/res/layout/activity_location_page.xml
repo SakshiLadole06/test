@@ -11,45 +11,77 @@
     <ImageView
         android:layout_width="280dp"
         android:layout_height="280dp"
-        android:layout_marginTop="131dp"
-        android:layout_marginLeft="47dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="40dp"
         android:src="@drawable/location"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <ImageView
-        android:layout_width="343dp"
-        android:layout_height="328dp"
+    <LinearLayout
+        android:layout_width="330dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="440dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/info"
+        android:padding="24dp"
+        android:background="@color/layoutColor"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/locB1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/layoutColor"
-        android:text="Don't Allow"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_bold"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:text="Allow access to your location"/>
 
-    <Button
-        android:id="@+id/locB2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/btnColor"
-        android:fontFamily="@font/manrope_regular"
-        android:text="Allow"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:justificationMode="inter_word"
+            android:text="• Discover nearby fitness events and group workouts happening in your area."/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="45dp"
+            android:textSize="15sp"
+            android:justificationMode="inter_word"
+            android:text="• Find friends who are crushing their goals near you."/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/locB1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_regular"
+                android:backgroundTint="@color/layoutColor"
+                android:layout_marginRight="68dp"
+                android:text="Don't Allow"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/locB2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/btnColor"
+                android:fontFamily="@font/manrope_regular"
+                android:text="Allow"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
