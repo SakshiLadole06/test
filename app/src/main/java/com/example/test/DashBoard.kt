@@ -39,11 +39,9 @@ class DashBoard : AppCompatActivity() {
 
         sharedPreferences = getSharedPreferences("login", MODE_PRIVATE)
 
-        // Try to get data from Intent (first-time login) or from SharedPreferences (app reopened)
         val arguments: Data? = intent.getSerializableExtra("data") as? Data
 
         if (arguments != null) {
-            // Save data to SharedPreferences if coming from Login
             sharedPreferences.edit().apply {
                 putBoolean("isLogIn", true)
                 putString("txtUserName", arguments.name)
@@ -54,12 +52,11 @@ class DashBoard : AppCompatActivity() {
                 putString("txtInterest1", arguments.interests?.getOrNull(0) ?: "")
                 putString("txtInterest2", arguments.interests?.getOrNull(1) ?: "")
                 putString("txtInterest3", arguments.interests?.getOrNull(2) ?: "")
-                putBoolean("flag", true) // Mark as logged in
+                putBoolean("flag", true)
                 apply()
             }
         }
 
-        // Load data from SharedPreferences
         userName.text = sharedPreferences.getString("txtUserName", "N/A")
         bio.text = sharedPreferences.getString("txtUserBio", "N/A")
         followers.text = sharedPreferences.getString("total_followers", "0")
@@ -73,7 +70,6 @@ class DashBoard : AppCompatActivity() {
             Glide.with(this).load(profilePhotoUrl).into(img)
         }
 
-        // Logout handling
         logoutBtn.setOnClickListener {
             sharedPreferences.edit().clear().apply()
             sharedPreferences.edit().putBoolean("flag", false).apply()

@@ -3,9 +3,11 @@ package com.example.test
 import com.example.test.model.APIDataClassLogin
 import com.example.test.model.APIDataClassOTP
 import com.example.test.model.EditProfile
+import com.example.test.model.FeedDataClass
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface APIClass{
@@ -16,7 +18,8 @@ interface APIClass{
     @FormUrlEncoded
     @POST("v1/verify-otp")
     fun verifyOTP(
-        @Field("contact_number") contactNumber: String, @Field("otp") otp: Int
+        @Field("contact_number") contactNumber: String,
+        @Field("otp") otp: Int
     ): Call<APIDataClassOTP>
 
     @FormUrlEncoded
@@ -24,4 +27,8 @@ interface APIClass{
     fun editProfile(
 
     ):Call<EditProfile>
+
+    //Day3
+    @GET("v2/get-all-feeds")
+    fun feed():Call<FeedDataClass>
 }

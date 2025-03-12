@@ -7,7 +7,10 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.test.day_three.HomePage
 import com.example.test.model.APIDataClassOTP
+import com.example.test.model.DataFeed
+import com.example.test.model.FeedDataClass
 import com.example.test.model.ObjectRetrofit
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -41,6 +44,7 @@ class OTP_Verification : AppCompatActivity() {
 
         otpBtn1.setOnClickListener {
             verifyOTP(mo_no.toString(),otpTV3.text.toString().toInt())
+            feedData()
         }
 
 //        CoroutineScope(Dispatchers.Default).launch{
@@ -72,8 +76,8 @@ class OTP_Verification : AppCompatActivity() {
                             saveTokenToPreferences(token)
                         } else {
                             Log.d("ABC", "Token not found in headers")
-                        }
 
+                        }
                         val moveDashboardPage = Intent(this@OTP_Verification, DashBoard::class.java)
                         moveDashboardPage.putExtra("data", response.body()!!.data as Serializable)
                         startActivity(moveDashboardPage)
@@ -93,6 +97,38 @@ class OTP_Verification : AppCompatActivity() {
             }
         })
     }
+
+    fun feedData(){
+        val objRetrofit = ObjectRetrofit(this)
+            .getAPIService()
+            .feed()
+        objRetrofit?.enqueue(object : Callback<FeedDataClass> {
+            override fun onResponse(call: Call<FeedDataClass>, response: Response<FeedDataClass>) {
+                try{
+                    if (response.code()==200) {
+                        var token=response.headers()["X-Authorization-Token"]
+                        val moveHomePage = Intent(this@OTP_Verification, HomePage::class.java)
+                        moveHomePage.putExtra("dataFeed", response.body()!!.data as Serializable)
+//                        startActivity(moveHomePage)
+//                        finish()
+                    }
+                    else{
+                        Log.d("ABC","A+${response.message()}")
+                        Toast.makeText(this@OTP_Verification,"Error Occurred: ${response.code()}", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                catch (e: Exception) {
+                    Log.d("ABC","B+${response.message()}")
+                    Toast.makeText(this@OTP_Verification,"Error Occurred: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+            override fun onFailure(call: Call<FeedDataClass>, t: Throwable) {
+                Log.d("ABC","C+${t.message}")
+                Toast.makeText(this@OTP_Verification,"Error Occurred: ${t.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
+    }
+    //for Token
     fun saveTokenToPreferences(token:String){
         val sharedPreferences = getSharedPreferences("token", MODE_PRIVATE)
         sharedPreferences.edit().putString("auth_token", token).apply()

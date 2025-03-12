@@ -8,4 +8,5 @@
     <color name="layoutColor">#F3F7F7</color>
     <color name="profilePageTextColor">#333333</color>
     <color name="interestTxtColor">#E0EAEB</color>
+    <color name="red">#FF0000</color>
 </resources>
