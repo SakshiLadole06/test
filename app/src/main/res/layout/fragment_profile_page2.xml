@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".day_two.fragments.ProfilePage2">
+
+    <TextView
+        android:layout_width="153dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="111dp"
+        android:text="Profile Setup"
+        android:textFontWeight="700"
+        android:textSize="24sp"
+        android:lineHeight="32dp"
+        android:letterSpacing="0"
+        android:fontFamily="@font/manrope_bold"/>
+
+    <TextView
+        android:layout_width="343dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="16dp"
+        android:text="Please complete the fields below to set up your profile."
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/profilePageTextColor"
+        android:gravity="center"
+        android:textFontWeight="400"
+        android:textSize="16sp"
+        android:lineHeight="24dp"
+        android:letterSpacing="0"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="200dp"
+        app:cardCornerRadius="50dp"
+        android:backgroundTint="@android:color/transparent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profilepic"
+            android:scaleType="centerCrop"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginStart="110dp"
+        android:text="Upload Profile Picture" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="340dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/transparent">
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/person"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:hint="Username"
+            android:backgroundTint="@android:color/transparent"
+            android:paddingLeft="12dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="405dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/transparent">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/gender"
+            android:drawableEnd="@drawable/down_arrow"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:hint="Gender"
+            android:backgroundTint="@android:color/transparent"
+            android:paddingLeft="12dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@android:color/transparent">
+
+        <EditText
+            android:id="@+id/dob"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/bio"
+            android:paddingTop="8dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:hint="Bio"
+            android:backgroundTint="@android:color/transparent"
+            android:paddingLeft="12dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="670dp">
+    <Button
+        android:id="@+id/B1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="@color/layoutColor"
+        android:textColor="@color/black"
+        android:text="Previous"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/B2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:backgroundTint="@color/btnColor"
+        android:text="Next"
+        android:fontFamily="@font/manrope_regular"
+        android:textSize="18sp" />
+    </LinearLayout>
+</FrameLayout>

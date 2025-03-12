@@ -5,4 +5,7 @@
     <color name="btnColor">#273B3C</color>
     <color name="textColor">#1A1A1A</color>
     <color name="boarder">#A2C1C3</color>
+    <color name="layoutColor">#F3F7F7</color>
+    <color name="profilePageTextColor">#333333</color>
+    <color name="interestTxtColor">#E0EAEB</color>
 </resources>
